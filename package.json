@@ -1,0 +1,23 @@
+{
+  "name": "ts-cs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "tsc && tape test/*.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gesslerpd/ts-cs.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gesslerpd/ts-cs/issues"
+  },
+  "homepage": "https://github.com/gesslerpd/ts-cs#readme",
+  "devDependencies": {
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.2"
+  }
+}
