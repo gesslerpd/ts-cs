@@ -44,3 +44,17 @@ test('Stack Test', function (t) {
     t.equal(s.pop(), 'Hello');
     t.equal(s.isEmpty(), true);
 });
+
+test('BST Test', function (t) {
+    t.plan(100);
+
+    var tree = new tscs.BinarySearchTree();
+
+    for (var i = 100; i > 0; i--) {
+        tree.insert(i);
+    }
+    var j = 0;
+    tree.traverse(function (element) {
+        t.equal(element, ++j);
+    }, tscs.Traverse.INORDER);
+});

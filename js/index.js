@@ -4,3 +4,4 @@ function __export(m) {
 }
 __export(require('./Queue'));
 __export(require('./Stack'));
+__export(require('./BinarySearchTree'));
