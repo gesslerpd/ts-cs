@@ -50,7 +50,7 @@ export class BinarySearchTree<T> {
      * 
      * @memberOf BinarySearchTree
      * 
-     * @timeComplexity O(log n)
+     * @timeComplexity { avg: O(log n), worst: O(n) }
      * @spaceComplexity O(1)
      */
     insert(data: T) {
@@ -91,7 +91,7 @@ export class BinarySearchTree<T> {
      * 
      * @memberOf BinarySearchTree
      * 
-     * @timeComplexity O(log n)
+     * @timeComplexity { avg: O(log n), worst: O(n) }
      * @spaceComplexity O(1)
      */
     search(data: T): boolean {
