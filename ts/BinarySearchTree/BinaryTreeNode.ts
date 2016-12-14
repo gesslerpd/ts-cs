@@ -1,5 +1,5 @@
 
-import { BinaryNode } from './BinaryNode';
+import { BinaryNode } from '../Node';
 
 export class BinaryTreeNode<T> extends BinaryNode<T> {
 

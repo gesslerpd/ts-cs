@@ -1,65 +1,48 @@
-import { BinaryTreeNode } from './BinaryTreeNode';
-
+"use strict";
+var BinaryTreeNode_1 = require('./BinaryTreeNode');
 /**
  * Traversal method used by the BST traverse method
- * 
+ *
  * @export
  * @enum {number}
  */
-export enum Traverse {
-    INORDER,
-    PREORDER,
-    POSTORDER
-}
-
-/**
- * Callback used by the tree traversal
- * TODO: Add index param
- */
-export type Callback<T> = (elem: T) => void;
-
+(function (Traverse) {
+    Traverse[Traverse["INORDER"] = 0] = "INORDER";
+    Traverse[Traverse["PREORDER"] = 1] = "PREORDER";
+    Traverse[Traverse["POSTORDER"] = 2] = "POSTORDER";
+})(exports.Traverse || (exports.Traverse = {}));
+var Traverse = exports.Traverse;
 /**
  * Binary Search Tree
- * 
+ *
  * @export
  * @class BinarySearchTree
  * @template T
- * 
+ *
  * @spaceComplexity O(n)
  */
-export class BinarySearchTree<T> {
-
-    /**
-     * Root node of the tree
-     * 
-     * @private
-     * @type {BinaryNode<T>}
-     * @memberOf BinarySearchTree
-     */
-    private _root: BinaryTreeNode<T>;
-
-    constructor() {
+var BinarySearchTree = (function () {
+    function BinarySearchTree() {
         this._root = null;
     }
-
     /**
      * Insert a new element into the tree
-     * 
+     *
      * @param {T} data
      * @returns
-     * 
+     *
      * @memberOf BinarySearchTree
-     * 
+     *
      * @timeComplexity { avg: O(log n), worst: O(n) }
      * @spaceComplexity O(1)
      */
-    insert(data: T) {
-        let node = new BinaryTreeNode(data);
+    BinarySearchTree.prototype.insert = function (data) {
+        var node = new BinaryTreeNode_1.BinaryTreeNode(data);
         if (this._root === null) {
             this._root = node;
         }
         else {
-            let cur = this._root;
+            var cur = this._root;
             while (cur != null) {
                 if (data > cur.data) {
                     if (cur.right === null) {
@@ -75,27 +58,22 @@ export class BinarySearchTree<T> {
                     }
                     cur = cur.left;
                 }
-
             }
-
-
         }
-
-    }
-
+    };
     /**
      * Search for an element in the tree
-     * 
+     *
      * @param {T} data
      * @returns {boolean}
-     * 
+     *
      * @memberOf BinarySearchTree
-     * 
+     *
      * @timeComplexity { avg: O(log n), worst: O(n) }
      * @spaceComplexity O(1)
      */
-    search(data: T): boolean {
-        let cur = this._root;
+    BinarySearchTree.prototype.search = function (data) {
+        var cur = this._root;
         while (cur != null) {
             if (data === cur.data) {
                 return true;
@@ -108,38 +86,34 @@ export class BinarySearchTree<T> {
             }
         }
         return false;
-    }
-
+    };
     /**
      * Creates a sorted Array from the current tree
-     * 
+     *
      * @returns
-     * 
+     *
      * @memberOf BinarySearchTree
      */
-    toArray(): T[] {
-        let result: T[] = [];
-
+    BinarySearchTree.prototype.toArray = function () {
+        var result = [];
         this.traverse(function (element) {
             result.push(element);
         });
-
         return result;
-    }
-
+    };
     /**
      * Traverse through items in the tree
-     * 
+     *
      * @param {Callback<T>} cb
      * @param {Traverse} [method]
-     * 
+     *
      * @memberOf BinarySearchTree
-     * 
+     *
      * @timeComplexity O(n)
      */
-    traverse(cb: Callback<T>, method?: Traverse) {
+    BinarySearchTree.prototype.traverse = function (cb, method) {
         method = method || Traverse.INORDER;
-        function inOrder(node: BinaryTreeNode<T>) {
+        function inOrder(node) {
             if (node !== null) {
                 if (node.left !== null) {
                     inOrder(node.left);
@@ -150,8 +124,7 @@ export class BinarySearchTree<T> {
                 }
             }
         }
-
-        function preOrder(node: BinaryTreeNode<T>) {
+        function preOrder(node) {
             if (node !== null) {
                 cb(node.data);
                 if (node.left !== null) {
@@ -162,8 +135,7 @@ export class BinarySearchTree<T> {
                 }
             }
         }
-
-        function postOrder(node: BinaryTreeNode<T>) {
+        function postOrder(node) {
             if (node !== null) {
                 if (node.left !== null) {
                     postOrder(node.left);
@@ -174,7 +146,6 @@ export class BinarySearchTree<T> {
                 cb(node.data);
             }
         }
-
         switch (method) {
             case Traverse.PREORDER:
                 preOrder(this._root);
@@ -186,5 +157,7 @@ export class BinarySearchTree<T> {
                 postOrder(this._root);
                 break;
         }
-    }
-}
+    };
+    return BinarySearchTree;
+}());
+exports.BinarySearchTree = BinarySearchTree;
