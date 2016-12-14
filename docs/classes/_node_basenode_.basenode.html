@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>QueueNode | tscs</title>
+	<title>BaseNode | tscs</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,34 +56,19 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_queue_.html">&quot;Queue&quot;</a>
+					<a href="../modules/_node_basenode_.html">&quot;Node/BaseNode&quot;</a>
 				</li>
 				<li>
-					<a href="_queue_.queuenode.html">QueueNode</a>
+					<a href="_node_basenode_.basenode.html">BaseNode</a>
 				</li>
 			</ul>
-			<h1>Class QueueNode&lt;T&gt;</h1>
+			<h1>Class BaseNode&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Node to store data in the queue</p>
-					</div>
-					<dl class="tsd-comment-tags">
-						<dt>class</dt>
-						<dd><p>QueueNode</p>
-						</dd>
-						<dt>template</dt>
-						<dd><p>T</p>
-						</dd>
-					</dl>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-type-parameters">
 				<h3>Type parameters</h3>
 				<ul class="tsd-type-parameters">
@@ -96,10 +81,13 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="_unarynode_.unarynode.html" class="tsd-signature-type">UnaryNode</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>
+						<span class="target">BaseNode</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">QueueNode</span>
+								<a href="_node_unarynode_.unarynode.html" class="tsd-signature-type">UnaryNode</a>
+							</li>
+							<li>
+								<a href="_node_binarynode_.binarynode.html" class="tsd-signature-type">BinaryNode</a>
 							</li>
 						</ul>
 					</li>
@@ -109,168 +97,94 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-not-exported">
+						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported"><a href="_queue_.queuenode.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_node_basenode_.basenode.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-inherited tsd-is-private-protected tsd-is-not-exported">
+						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-not-exported"><a href="_queue_.queuenode.html#_first" class="tsd-kind-icon">_first</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_node_basenode_.basenode.html#_data" class="tsd-kind-icon">_data</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
+						<section class="tsd-index-section ">
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported"><a href="_queue_.queuenode.html#data" class="tsd-kind-icon">data</a></li>
-								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-not-exported"><a href="_queue_.queuenode.html#next" class="tsd-kind-icon">next</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="_node_basenode_.basenode.html#data" class="tsd-kind-icon">data</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Queue<wbr>Node<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_queue_.queuenode.html" class="tsd-signature-type">QueueNode</a></li>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Base<wbr>Node<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_node_basenode_.basenode.html" class="tsd-signature-type">BaseNode</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides <a href="_unarynode_.unarynode.html">UnaryNode</a>.<a href="_unarynode_.unarynode.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/Queue.ts#L10">Queue.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/3c99ea8/ts/Node/BaseNode.ts#L4">Node/BaseNode.ts:4</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Creates an instance of QueueNode given the element data</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>memberof</dt>
-									<dd><p>QueueNode</p>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>data: <span class="tsd-signature-type">T</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<div class="lead">
-										</div>
-									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_queue_.queuenode.html" class="tsd-signature-type">QueueNode</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="_node_basenode_.basenode.html" class="tsd-signature-type">BaseNode</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited tsd-is-private-protected tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-not-exported">
-					<a name="_first" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _first</h3>
-					<div class="tsd-signature tsd-kind-icon">_first<span class="tsd-signature-symbol">:</span> <a href="_unarynode_.unarynode.html" class="tsd-signature-type">UnaryNode</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="_data" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _data</h3>
+					<div class="tsd-signature tsd-kind-icon">_data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_unarynode_.unarynode.html">UnaryNode</a>.<a href="_unarynode_.unarynode.html#_first">_first</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/UnaryNode.ts#L6">UnaryNode.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/3c99ea8/ts/Node/BaseNode.ts#L4">Node/BaseNode.ts:4</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Accessors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
 					<a name="data" class="tsd-anchor"></a>
 					<h3>data</h3>
-					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> data<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
 						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> data<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="_basenode_.basenode.html">BaseNode</a>.<a href="_basenode_.basenode.html#data">data</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/BaseNode.ts#L10">BaseNode.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/3c99ea8/ts/Node/BaseNode.ts#L10">Node/BaseNode.ts:10</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="_basenode_.basenode.html">BaseNode</a>.<a href="_basenode_.basenode.html#data">data</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/BaseNode.ts#L14">BaseNode.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/3c99ea8/ts/Node/BaseNode.ts#L14">Node/BaseNode.ts:14</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>data: <span class="tsd-signature-type">T</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-not-exported">
-					<a name="next" class="tsd-anchor"></a>
-					<h3>next</h3>
-					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> next<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_queue_.queuenode.html" class="tsd-signature-type">QueueNode</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> next<span class="tsd-signature-symbol">(</span>node<span class="tsd-signature-symbol">: </span><a href="_queue_.queuenode.html" class="tsd-signature-type">QueueNode</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/Queue.ts#L29">Queue.ts:29</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Gets the next node in the queue</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>type</dt>
-									<dd><p>{QueueNode<T>}</p>
-									</dd>
-									<dt>memberof</dt>
-									<dd><p>QueueNode</p>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-returns-title">Returns <a href="_queue_.queuenode.html" class="tsd-signature-type">QueueNode</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/Queue.ts#L39">Queue.ts:39</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Sets the next node in the queue</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>memberof</dt>
-									<dd><p>QueueNode</p>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>node: <a href="_queue_.queuenode.html" class="tsd-signature-type">QueueNode</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -286,25 +200,43 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_basenode_.html">"<wbr>Base<wbr>Node"</a>
+						<a href="../modules/_binarysearchtree_binarysearchtree_.html">"<wbr>Binary<wbr>Search<wbr>Tree/<wbr>Binary<wbr>Search<wbr>Tree"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_binarynode_.html">"<wbr>Binary<wbr>Node"</a>
+						<a href="../modules/_binarysearchtree_binarytreenode_.html">"<wbr>Binary<wbr>Search<wbr>Tree/<wbr>Binary<wbr>Tree<wbr>Node"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_binarysearchtree_.html">"<wbr>Binary<wbr>Search<wbr>Tree"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_binarytreenode_.html">"<wbr>Binary<wbr>Tree<wbr>Node"</a>
+						<a href="../modules/_binarysearchtree_index_.html">"<wbr>Binary<wbr>Search<wbr>Tree/index"</a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="../modules/_queue_.html">"<wbr>Queue"</a>
+						<a href="../modules/_node_basenode_.html">"<wbr>Node/<wbr>Base<wbr>Node"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_stack_.html">"<wbr>Stack"</a>
+						<a href="../modules/_node_binarynode_.html">"<wbr>Node/<wbr>Binary<wbr>Node"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_unarynode_.html">"<wbr>Unary<wbr>Node"</a>
+						<a href="../modules/_node_unarynode_.html">"<wbr>Node/<wbr>Unary<wbr>Node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_node_index_.html">"<wbr>Node/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_queue_queue_.html">"<wbr>Queue/<wbr>Queue"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_queue_queuenode_.html">"<wbr>Queue/<wbr>Queue<wbr>Node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_queue_index_.html">"<wbr>Queue/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_stack_stack_.html">"<wbr>Stack/<wbr>Stack"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_stack_stacknode_.html">"<wbr>Stack/<wbr>Stack<wbr>Node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_stack_index_.html">"<wbr>Stack/index"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_index_.html">"index"</a>
@@ -313,25 +245,19 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="_queue_.queue.html" class="tsd-kind-icon">Queue</a>
-					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-parent-kind-external-module tsd-has-type-parameter tsd-is-not-exported">
-						<a href="_queue_.queuenode.html" class="tsd-kind-icon">Queue<wbr>Node</a>
+					<li class="current tsd-kind-class tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="_node_basenode_.basenode.html" class="tsd-kind-icon">Base<wbr>Node</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-not-exported">
-								<a href="_queue_.queuenode.html#constructor" class="tsd-kind-icon">constructor</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="_node_basenode_.basenode.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected tsd-is-not-exported">
-								<a href="_queue_.queuenode.html#_first" class="tsd-kind-icon">_first</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_node_basenode_.basenode.html#_data" class="tsd-kind-icon">_data</a>
 							</li>
-							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-not-exported">
-								<a href="_queue_.queuenode.html#data" class="tsd-kind-icon">data</a>
-							</li>
-							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-not-exported">
-								<a href="_queue_.queuenode.html#next" class="tsd-kind-icon">next</a>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class">
+								<a href="_node_basenode_.basenode.html#data" class="tsd-kind-icon">data</a>
 							</li>
 						</ul>
 					</li>

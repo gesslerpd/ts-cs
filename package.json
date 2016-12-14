@@ -5,7 +5,7 @@
   "main": "js/index.js",
   "scripts": {
     "test": "tsc && tape test/*.js | tap-spec",
-    "docs": "docs.sh"
+    "docs": "typedoc --out docs/ --name tscs --module commonjs --target ES5 ts/ --theme default"
   },
   "repository": {
     "type": "git",

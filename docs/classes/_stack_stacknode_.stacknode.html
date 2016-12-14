@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BinarySearchTree | tscs</title>
+	<title>StackNode | tscs</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_binarysearchtree_.html">&quot;BinarySearchTree&quot;</a>
+					<a href="../modules/_stack_stacknode_.html">&quot;Stack/StackNode&quot;</a>
 				</li>
 				<li>
-					<a href="_binarysearchtree_.binarysearchtree.html">BinarySearchTree</a>
+					<a href="_stack_stacknode_.stacknode.html">StackNode</a>
 				</li>
 			</ul>
-			<h1>Class BinarySearchTree&lt;T&gt;</h1>
+			<h1>Class StackNode&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -72,19 +72,14 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Binary Search Tree</p>
+						<p>Node to store data in the stack</p>
 					</div>
 					<dl class="tsd-comment-tags">
-						<dt>export</dt>
-						<dd></dd>
 						<dt>class</dt>
-						<dd><p>BinarySearchTree</p>
+						<dd><p>StackNode</p>
 						</dd>
 						<dt>template</dt>
 						<dd><p>T</p>
-						</dd>
-						<dt>spacecomplexity</dt>
-						<dd><p>O(n)</p>
 						</dd>
 					</dl>
 				</div>
@@ -101,7 +96,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">BinarySearchTree</span>
+						<a href="_node_unarynode_.unarynode.html" class="tsd-signature-type">UnaryNode</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">StackNode</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -112,22 +112,20 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_binarysearchtree_.binarysearchtree.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="_stack_stacknode_.stacknode.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+						<section class="tsd-index-section tsd-is-inherited tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_binarysearchtree_.binarysearchtree.html#_root" class="tsd-kind-icon">_root</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_stack_stacknode_.stacknode.html#_first" class="tsd-kind-icon">_first</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
-							<h3>Methods</h3>
+							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_binarysearchtree_.binarysearchtree.html#insert" class="tsd-kind-icon">insert</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_binarysearchtree_.binarysearchtree.html#search" class="tsd-kind-icon">search</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_binarysearchtree_.binarysearchtree.html#toarray" class="tsd-kind-icon">to<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_binarysearchtree_.binarysearchtree.html#traverse" class="tsd-kind-icon">traverse</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><a href="_stack_stacknode_.stacknode.html#data" class="tsd-kind-icon">data</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="_stack_stacknode_.stacknode.html#prev" class="tsd-kind-icon">prev</a></li>
 							</ul>
 						</section>
 					</div>
@@ -135,81 +133,85 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Binary<wbr>Search<wbr>Tree<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_binarysearchtree_.binarysearchtree.html" class="tsd-signature-type">BinarySearchTree</a></li>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Stack<wbr>Node<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_stack_stacknode_.stacknode.html" class="tsd-signature-type">StackNode</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="_node_unarynode_.unarynode.html">UnaryNode</a>.<a href="_node_unarynode_.unarynode.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/BinarySearchTree.ts#L39">BinarySearchTree.ts:39</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="_binarysearchtree_.binarysearchtree.html" class="tsd-signature-type">BinarySearchTree</a></h4>
-						</li>
-					</ul>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="_root" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _root</h3>
-					<div class="tsd-signature tsd-kind-icon">_root<span class="tsd-signature-symbol">:</span> <a href="_binarytreenode_.binarytreenode.html" class="tsd-signature-type">BinaryTreeNode</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/BinarySearchTree.ts#L39">BinarySearchTree.ts:39</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Root node of the tree</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>type</dt>
-							<dd><p>{BinaryNode<T>}</p>
-							</dd>
-							<dt>memberof</dt>
-							<dd><p>BinarySearchTree</p>
-							</dd>
-						</dl>
-					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="insert" class="tsd-anchor"></a>
-					<h3>insert</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">insert<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/BinarySearchTree.ts#L56">BinarySearchTree.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/3c99ea8/ts/Stack/StackNode.ts#L10">Stack/StackNode.ts:10</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Insert a new element into the tree</p>
+									<p>Creates an instance of StackNode.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>memberof</dt>
-									<dd><p>BinarySearchTree</p>
-									</dd>
-									<dt>timecomplexity</dt>
-									<dd><p>{ avg: O(log n), worst: O(n) }</p>
-									</dd>
-									<dt>spacecomplexity</dt>
-									<dd><p>O(1)</p>
+									<dd><p>StackNode</p>
 									</dd>
 								</dl>
 							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <span class="tsd-signature-type">T</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_stack_stacknode_.stacknode.html" class="tsd-signature-type">StackNode</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited tsd-is-private-protected">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="_first" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _first</h3>
+					<div class="tsd-signature tsd-kind-icon">_first<span class="tsd-signature-symbol">:</span> <a href="_node_unarynode_.unarynode.html" class="tsd-signature-type">UnaryNode</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_node_unarynode_.unarynode.html">UnaryNode</a>.<a href="_node_unarynode_.unarynode.html#_first">_first</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/3c99ea8/ts/Node/UnaryNode.ts#L6">Node/UnaryNode.ts:6</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+					<a name="data" class="tsd-anchor"></a>
+					<h3>data</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> data<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> data<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_node_basenode_.basenode.html">BaseNode</a>.<a href="_node_basenode_.basenode.html#data">data</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/3c99ea8/ts/Node/BaseNode.ts#L10">Node/BaseNode.ts:10</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_node_basenode_.basenode.html">BaseNode</a>.<a href="_node_basenode_.basenode.html#data">data</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/3c99ea8/ts/Node/BaseNode.ts#L14">Node/BaseNode.ts:14</a></li>
+								</ul>
+							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -220,105 +222,55 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="search" class="tsd-anchor"></a>
-					<h3>search</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">search<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
+					<a name="prev" class="tsd-anchor"></a>
+					<h3>prev</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> prev<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_stack_stacknode_.stacknode.html" class="tsd-signature-type">StackNode</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> prev<span class="tsd-signature-symbol">(</span>node<span class="tsd-signature-symbol">: </span><a href="_stack_stacknode_.stacknode.html" class="tsd-signature-type">StackNode</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/BinarySearchTree.ts#L97">BinarySearchTree.ts:97</a></li>
+									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/3c99ea8/ts/Stack/StackNode.ts#L30">Stack/StackNode.ts:30</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Search for an element in the tree</p>
+									<p>Gets the previous node in the stack</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>type</dt>
+									<dd><p>{StackNode<T>}</p>
+									</dd>
+									<dt>memberof</dt>
+									<dd><p>StackNode</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="_stack_stacknode_.stacknode.html" class="tsd-signature-type">StackNode</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/3c99ea8/ts/Stack/StackNode.ts#L39">Stack/StackNode.ts:39</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the previous node in the stack</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>memberof</dt>
-									<dd><p>BinarySearchTree</p>
-									</dd>
-									<dt>timecomplexity</dt>
-									<dd><p>{ avg: O(log n), worst: O(n) }</p>
-									</dd>
-									<dt>spacecomplexity</dt>
-									<dd><p>O(1)</p>
+									<dd><p>StackNode</p>
 									</dd>
 								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>data: <span class="tsd-signature-type">T</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="toarray" class="tsd-anchor"></a>
-					<h3>to<wbr>Array</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">to<wbr>Array<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/BinarySearchTree.ts#L120">BinarySearchTree.ts:120</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Creates a sorted Array from the current tree</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>memberof</dt>
-									<dd><p>BinarySearchTree</p>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="traverse" class="tsd-anchor"></a>
-					<h3>traverse</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">traverse<span class="tsd-signature-symbol">(</span>cb<span class="tsd-signature-symbol">: </span><a href="../modules/_binarysearchtree_.html#callback" class="tsd-signature-type">Callback</a>, method<span class="tsd-signature-symbol">?: </span><a href="../enums/_binarysearchtree_.traverse.html" class="tsd-signature-type">Traverse</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/BinarySearchTree.ts#L140">BinarySearchTree.ts:140</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Traverse through items in the tree</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>memberof</dt>
-									<dd><p>BinarySearchTree</p>
-									</dd>
-									<dt>timecomplexity</dt>
-									<dd><p>O(n)</p>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>cb: <a href="../modules/_binarysearchtree_.html#callback" class="tsd-signature-type">Callback</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> method: <a href="../enums/_binarysearchtree_.traverse.html" class="tsd-signature-type">Traverse</a></h5>
+									<h5>node: <a href="_stack_stacknode_.stacknode.html" class="tsd-signature-type">StackNode</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -334,25 +286,43 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_basenode_.html">"<wbr>Base<wbr>Node"</a>
+						<a href="../modules/_binarysearchtree_binarysearchtree_.html">"<wbr>Binary<wbr>Search<wbr>Tree/<wbr>Binary<wbr>Search<wbr>Tree"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_binarynode_.html">"<wbr>Binary<wbr>Node"</a>
+						<a href="../modules/_binarysearchtree_binarytreenode_.html">"<wbr>Binary<wbr>Search<wbr>Tree/<wbr>Binary<wbr>Tree<wbr>Node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_binarysearchtree_index_.html">"<wbr>Binary<wbr>Search<wbr>Tree/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_node_basenode_.html">"<wbr>Node/<wbr>Base<wbr>Node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_node_binarynode_.html">"<wbr>Node/<wbr>Binary<wbr>Node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_node_unarynode_.html">"<wbr>Node/<wbr>Unary<wbr>Node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_node_index_.html">"<wbr>Node/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_queue_queue_.html">"<wbr>Queue/<wbr>Queue"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_queue_queuenode_.html">"<wbr>Queue/<wbr>Queue<wbr>Node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_queue_index_.html">"<wbr>Queue/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_stack_stack_.html">"<wbr>Stack/<wbr>Stack"</a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="../modules/_binarysearchtree_.html">"<wbr>Binary<wbr>Search<wbr>Tree"</a>
+						<a href="../modules/_stack_stacknode_.html">"<wbr>Stack/<wbr>Stack<wbr>Node"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_binarytreenode_.html">"<wbr>Binary<wbr>Tree<wbr>Node"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_queue_.html">"<wbr>Queue"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_stack_.html">"<wbr>Stack"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_unarynode_.html">"<wbr>Unary<wbr>Node"</a>
+						<a href="../modules/_stack_index_.html">"<wbr>Stack/index"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_index_.html">"index"</a>
@@ -361,39 +331,27 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
-						<a href="../enums/_binarysearchtree_.traverse.html" class="tsd-kind-icon">Traverse</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="_binarysearchtree_.binarysearchtree.html" class="tsd-kind-icon">Binary<wbr>Search<wbr>Tree</a>
+						<a href="_stack_stacknode_.stacknode.html" class="tsd-kind-icon">Stack<wbr>Node</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="_binarysearchtree_.binarysearchtree.html#constructor" class="tsd-kind-icon">constructor</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_stack_stacknode_.stacknode.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_binarysearchtree_.binarysearchtree.html#_root" class="tsd-kind-icon">_root</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_stack_stacknode_.stacknode.html#_first" class="tsd-kind-icon">_first</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_binarysearchtree_.binarysearchtree.html#insert" class="tsd-kind-icon">insert</a>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+								<a href="_stack_stacknode_.stacknode.html#data" class="tsd-kind-icon">data</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_binarysearchtree_.binarysearchtree.html#search" class="tsd-kind-icon">search</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_binarysearchtree_.binarysearchtree.html#toarray" class="tsd-kind-icon">to<wbr>Array</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_binarysearchtree_.binarysearchtree.html#traverse" class="tsd-kind-icon">traverse</a>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class">
+								<a href="_stack_stacknode_.stacknode.html#prev" class="tsd-kind-icon">prev</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="../modules/_binarysearchtree_.html#callback" class="tsd-kind-icon">Callback</a>
-					</li>
 				</ul>
 			</nav>
 		</div>

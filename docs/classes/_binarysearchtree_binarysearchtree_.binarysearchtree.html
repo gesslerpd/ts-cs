@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Queue | tscs</title>
+	<title>BinarySearchTree | tscs</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_queue_.html">&quot;Queue&quot;</a>
+					<a href="../modules/_binarysearchtree_binarysearchtree_.html">&quot;BinarySearchTree/BinarySearchTree&quot;</a>
 				</li>
 				<li>
-					<a href="_queue_.queue.html">Queue</a>
+					<a href="_binarysearchtree_binarysearchtree_.binarysearchtree.html">BinarySearchTree</a>
 				</li>
 			</ul>
-			<h1>Class Queue&lt;T&gt;</h1>
+			<h1>Class BinarySearchTree&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -72,16 +72,19 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>FIFO Queue</p>
+						<p>Binary Search Tree</p>
 					</div>
 					<dl class="tsd-comment-tags">
 						<dt>export</dt>
 						<dd></dd>
 						<dt>class</dt>
-						<dd><p>Queue</p>
+						<dd><p>BinarySearchTree</p>
 						</dd>
 						<dt>template</dt>
 						<dd><p>T</p>
+						</dd>
+						<dt>spacecomplexity</dt>
+						<dd><p>O(n)</p>
 						</dd>
 					</dl>
 				</div>
@@ -98,7 +101,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Queue</span>
+						<span class="target">BinarySearchTree</span>
 					</li>
 				</ul>
 			</section>
@@ -109,30 +112,22 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_queue_.queue.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_binarysearchtree_binarysearchtree_.binarysearchtree.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_queue_.queue.html#_head" class="tsd-kind-icon">_head</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_queue_.queue.html#_length" class="tsd-kind-icon">_length</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_queue_.queue.html#_tail" class="tsd-kind-icon">_tail</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Accessors</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_queue_.queue.html#length" class="tsd-kind-icon">length</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_binarysearchtree_binarysearchtree_.binarysearchtree.html#_root" class="tsd-kind-icon">_root</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#dequeue" class="tsd-kind-icon">dequeue</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#enqueue" class="tsd-kind-icon">enqueue</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#peek" class="tsd-kind-icon">peek</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_binarysearchtree_binarysearchtree_.binarysearchtree.html#insert" class="tsd-kind-icon">insert</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_binarysearchtree_binarysearchtree_.binarysearchtree.html#search" class="tsd-kind-icon">search</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_binarysearchtree_binarysearchtree_.binarysearchtree.html#toarray" class="tsd-kind-icon">to<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_binarysearchtree_binarysearchtree_.binarysearchtree.html#traverse" class="tsd-kind-icon">traverse</a></li>
 							</ul>
 						</section>
 					</div>
@@ -144,26 +139,16 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Queue<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_queue_.queue.html" class="tsd-signature-type">Queue</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Binary<wbr>Search<wbr>Tree<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_binarysearchtree_binarysearchtree_.binarysearchtree.html" class="tsd-signature-type">BinarySearchTree</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/Queue.ts#L79">Queue.ts:79</a></li>
+									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/3c99ea8/ts/BinarySearchTree/BinarySearchTree.ts#L40">BinarySearchTree/BinarySearchTree.ts:40</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Creates an instance of Queue.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>memberof</dt>
-									<dd><p>Queue</p>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-returns-title">Returns <a href="_queue_.queue.html" class="tsd-signature-type">Queue</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="_binarysearchtree_binarysearchtree_.binarysearchtree.html" class="tsd-signature-type">BinarySearchTree</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -171,168 +156,54 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="_head" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _head</h3>
-					<div class="tsd-signature tsd-kind-icon">_head<span class="tsd-signature-symbol">:</span> <a href="_queue_.queuenode.html" class="tsd-signature-type">QueueNode</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="_root" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _root</h3>
+					<div class="tsd-signature tsd-kind-icon">_root<span class="tsd-signature-symbol">:</span> <a href="_binarysearchtree_binarytreenode_.binarytreenode.html" class="tsd-signature-type">BinaryTreeNode</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/Queue.ts#L70">Queue.ts:70</a></li>
+							<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/3c99ea8/ts/BinarySearchTree/BinarySearchTree.ts#L40">BinarySearchTree/BinarySearchTree.ts:40</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Front end of the queue where items are removed from</p>
+							<p>Root node of the tree</p>
 						</div>
 						<dl class="tsd-comment-tags">
 							<dt>type</dt>
-							<dd><p>{QueueNode<T>}</p>
+							<dd><p>{BinaryNode<T>}</p>
 							</dd>
 							<dt>memberof</dt>
-							<dd><p>Queue</p>
+							<dd><p>BinarySearchTree</p>
 							</dd>
 						</dl>
 					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="_length" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _length</h3>
-					<div class="tsd-signature tsd-kind-icon">_length<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/Queue.ts#L61">Queue.ts:61</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Number of items currently in the queue</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>type</dt>
-							<dd><p>{number}</p>
-							</dd>
-							<dt>memberof</dt>
-							<dd><p>Queue</p>
-							</dd>
-						</dl>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="_tail" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _tail</h3>
-					<div class="tsd-signature tsd-kind-icon">_tail<span class="tsd-signature-symbol">:</span> <a href="_queue_.queuenode.html" class="tsd-signature-type">QueueNode</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/Queue.ts#L79">Queue.ts:79</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Tail end of the queue where items are appended</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>type</dt>
-							<dd><p>{QueueNode<T>}</p>
-							</dd>
-							<dt>memberof</dt>
-							<dd><p>Queue</p>
-							</dd>
-						</dl>
-					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Accessors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
-					<a name="length" class="tsd-anchor"></a>
-					<h3>length</h3>
-					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> length<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/Queue.ts#L173">Queue.ts:173</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>The number of items in the Queue</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>readonly</dt>
-									<dd></dd>
-									<dt>type</dt>
-									<dd><p>{number}</p>
-									</dd>
-									<dt>memberof</dt>
-									<dd><p>Queue</p>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-						</li>
-					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="dequeue" class="tsd-anchor"></a>
-					<h3>dequeue</h3>
+					<a name="insert" class="tsd-anchor"></a>
+					<h3>insert</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">dequeue<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+						<li class="tsd-signature tsd-kind-icon">insert<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/Queue.ts#L125">Queue.ts:125</a></li>
+									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/3c99ea8/ts/BinarySearchTree/BinarySearchTree.ts#L57">BinarySearchTree/BinarySearchTree.ts:57</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Remove item from the queue</p>
+									<p>Insert a new element into the tree</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>memberof</dt>
-									<dd><p>Queue</p>
+									<dd><p>BinarySearchTree</p>
 									</dd>
 									<dt>timecomplexity</dt>
-									<dd><p>O(1)</p>
-									</dd>
-									<dt>spacecomplexity</dt>
-									<dd><p>O(1)</p>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="enqueue" class="tsd-anchor"></a>
-					<h3>enqueue</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">enqueue<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/Queue.ts#L103">Queue.ts:103</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Add item to the queue</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>memberof</dt>
-									<dd><p>Queue</p>
-									</dd>
-									<dt>timecomplexity</dt>
-									<dd><p>O(1)</p>
+									<dd><p>{ avg: O(log n), worst: O(n) }</p>
 									</dd>
 									<dt>spacecomplexity</dt>
 									<dd><p>O(1)</p>
@@ -343,8 +214,6 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>data: <span class="tsd-signature-type">T</span></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -352,68 +221,107 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="isempty" class="tsd-anchor"></a>
-					<h3>is<wbr>Empty</h3>
+					<a name="search" class="tsd-anchor"></a>
+					<h3>search</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Empty<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">search<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/Queue.ts#L162">Queue.ts:162</a></li>
+									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/3c99ea8/ts/BinarySearchTree/BinarySearchTree.ts#L98">BinarySearchTree/BinarySearchTree.ts:98</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Check if the Queue is empty</p>
+									<p>Search for an element in the tree</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>memberof</dt>
-									<dd><p>Queue</p>
+									<dd><p>BinarySearchTree</p>
 									</dd>
 									<dt>timecomplexity</dt>
-									<dd><p>O(1)</p>
+									<dd><p>{ avg: O(log n), worst: O(n) }</p>
 									</dd>
 									<dt>spacecomplexity</dt>
 									<dd><p>O(1)</p>
 									</dd>
 								</dl>
 							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="peek" class="tsd-anchor"></a>
-					<h3>peek</h3>
+					<a name="toarray" class="tsd-anchor"></a>
+					<h3>to<wbr>Array</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">peek<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Array<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/20d5ec0/ts/Queue.ts#L145">Queue.ts:145</a></li>
+									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/3c99ea8/ts/BinarySearchTree/BinarySearchTree.ts#L121">BinarySearchTree/BinarySearchTree.ts:121</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Inspect the next item in the queue without removal</p>
+									<p>Creates a sorted Array from the current tree</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>memberof</dt>
-									<dd><p>Queue</p>
-									</dd>
-									<dt>timecomplexity</dt>
-									<dd><p>O(1)</p>
-									</dd>
-									<dt>spacecomplexity</dt>
-									<dd><p>O(1)</p>
+									<dd><p>BinarySearchTree</p>
 									</dd>
 								</dl>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="traverse" class="tsd-anchor"></a>
+					<h3>traverse</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">traverse<span class="tsd-signature-symbol">(</span>cb<span class="tsd-signature-symbol">: </span><a href="../modules/_binarysearchtree_binarysearchtree_.html#callback" class="tsd-signature-type">Callback</a>, method<span class="tsd-signature-symbol">?: </span><a href="../enums/_binarysearchtree_binarysearchtree_.traverse.html" class="tsd-signature-type">Traverse</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/gesslerpd/ts-cs/blob/3c99ea8/ts/BinarySearchTree/BinarySearchTree.ts#L141">BinarySearchTree/BinarySearchTree.ts:141</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Traverse through items in the tree</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>memberof</dt>
+									<dd><p>BinarySearchTree</p>
+									</dd>
+									<dt>timecomplexity</dt>
+									<dd><p>O(n)</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>cb: <a href="../modules/_binarysearchtree_binarysearchtree_.html#callback" class="tsd-signature-type">Callback</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> method: <a href="../enums/_binarysearchtree_binarysearchtree_.traverse.html" class="tsd-signature-type">Traverse</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -425,26 +333,44 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_basenode_.html">"<wbr>Base<wbr>Node"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_binarynode_.html">"<wbr>Binary<wbr>Node"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_binarysearchtree_.html">"<wbr>Binary<wbr>Search<wbr>Tree"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_binarytreenode_.html">"<wbr>Binary<wbr>Tree<wbr>Node"</a>
-					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="../modules/_queue_.html">"<wbr>Queue"</a>
+						<a href="../modules/_binarysearchtree_binarysearchtree_.html">"<wbr>Binary<wbr>Search<wbr>Tree/<wbr>Binary<wbr>Search<wbr>Tree"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_stack_.html">"<wbr>Stack"</a>
+						<a href="../modules/_binarysearchtree_binarytreenode_.html">"<wbr>Binary<wbr>Search<wbr>Tree/<wbr>Binary<wbr>Tree<wbr>Node"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_unarynode_.html">"<wbr>Unary<wbr>Node"</a>
+						<a href="../modules/_binarysearchtree_index_.html">"<wbr>Binary<wbr>Search<wbr>Tree/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_node_basenode_.html">"<wbr>Node/<wbr>Base<wbr>Node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_node_binarynode_.html">"<wbr>Node/<wbr>Binary<wbr>Node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_node_unarynode_.html">"<wbr>Node/<wbr>Unary<wbr>Node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_node_index_.html">"<wbr>Node/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_queue_queue_.html">"<wbr>Queue/<wbr>Queue"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_queue_queuenode_.html">"<wbr>Queue/<wbr>Queue<wbr>Node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_queue_index_.html">"<wbr>Queue/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_stack_stack_.html">"<wbr>Stack/<wbr>Stack"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_stack_stacknode_.html">"<wbr>Stack/<wbr>Stack<wbr>Node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_stack_index_.html">"<wbr>Stack/index"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_index_.html">"index"</a>
@@ -453,44 +379,38 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
+						<a href="../enums/_binarysearchtree_binarysearchtree_.traverse.html" class="tsd-kind-icon">Traverse</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="_queue_.queue.html" class="tsd-kind-icon">Queue</a>
+						<a href="_binarysearchtree_binarysearchtree_.binarysearchtree.html" class="tsd-kind-icon">Binary<wbr>Search<wbr>Tree</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="_queue_.queue.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="_binarysearchtree_binarysearchtree_.binarysearchtree.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_queue_.queue.html#_head" class="tsd-kind-icon">_head</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_queue_.queue.html#_length" class="tsd-kind-icon">_length</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_queue_.queue.html#_tail" class="tsd-kind-icon">_tail</a>
-							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
-								<a href="_queue_.queue.html#length" class="tsd-kind-icon">length</a>
+								<a href="_binarysearchtree_binarysearchtree_.binarysearchtree.html#_root" class="tsd-kind-icon">_root</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_queue_.queue.html#dequeue" class="tsd-kind-icon">dequeue</a>
+								<a href="_binarysearchtree_binarysearchtree_.binarysearchtree.html#insert" class="tsd-kind-icon">insert</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_queue_.queue.html#enqueue" class="tsd-kind-icon">enqueue</a>
+								<a href="_binarysearchtree_binarysearchtree_.binarysearchtree.html#search" class="tsd-kind-icon">search</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_queue_.queue.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a>
+								<a href="_binarysearchtree_binarysearchtree_.binarysearchtree.html#toarray" class="tsd-kind-icon">to<wbr>Array</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_queue_.queue.html#peek" class="tsd-kind-icon">peek</a>
+								<a href="_binarysearchtree_binarysearchtree_.binarysearchtree.html#traverse" class="tsd-kind-icon">traverse</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-has-type-parameter tsd-is-not-exported">
-						<a href="_queue_.queuenode.html" class="tsd-kind-icon">Queue<wbr>Node</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="../modules/_binarysearchtree_binarysearchtree_.html#callback" class="tsd-kind-icon">Callback</a>
 					</li>
 				</ul>
 			</nav>
