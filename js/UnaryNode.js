@@ -5,12 +5,11 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var BaseNode_1 = require('./BaseNode');
-var BinaryNode = (function (_super) {
-    __extends(BinaryNode, _super);
-    function BinaryNode(data) {
+var UnaryNode = (function (_super) {
+    __extends(UnaryNode, _super);
+    function UnaryNode(data) {
         _super.call(this, data);
-        this._first = this._second = null;
     }
-    return BinaryNode;
+    return UnaryNode;
 }(BaseNode_1.BaseNode));
-exports.BinaryNode = BinaryNode;
+exports.UnaryNode = UnaryNode;

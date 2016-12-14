@@ -1,4 +1,4 @@
-import { BinaryNode } from './BinaryNode';
+import { BinaryTreeNode } from './BinaryTreeNode';
 
 /**
  * Traversal method used by the BST traverse method
@@ -36,7 +36,7 @@ export class BinarySearchTree<T> {
      * @type {BinaryNode<T>}
      * @memberOf BinarySearchTree
      */
-    private _root: BinaryNode<T>;
+    private _root: BinaryTreeNode<T>;
 
     constructor() {
         this._root = null;
@@ -54,7 +54,7 @@ export class BinarySearchTree<T> {
      * @spaceComplexity O(1)
      */
     insert(data: T) {
-        let node = new BinaryNode(data);
+        let node = new BinaryTreeNode(data);
         if (this._root === null) {
             this._root = node;
         }
@@ -139,7 +139,7 @@ export class BinarySearchTree<T> {
      */
     traverse(cb: Callback<T>, method?: Traverse) {
         method = method || Traverse.INORDER;
-        function inOrder(node: BinaryNode<T>) {
+        function inOrder(node: BinaryTreeNode<T>) {
             if (node !== null) {
                 if (node.left !== null) {
                     inOrder(node.left);
@@ -151,7 +151,7 @@ export class BinarySearchTree<T> {
             }
         }
 
-        function preOrder(node: BinaryNode<T>) {
+        function preOrder(node: BinaryTreeNode<T>) {
             if (node !== null) {
                 cb(node.data);
                 if (node.left !== null) {
@@ -163,7 +163,7 @@ export class BinarySearchTree<T> {
             }
         }
 
-        function postOrder(node: BinaryNode<T>) {
+        function postOrder(node: BinaryTreeNode<T>) {
             if (node !== null) {
                 if (node.left !== null) {
                     postOrder(node.left);

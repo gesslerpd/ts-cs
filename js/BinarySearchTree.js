@@ -1,5 +1,5 @@
 "use strict";
-var BinaryNode_1 = require('./BinaryNode');
+var BinaryTreeNode_1 = require('./BinaryTreeNode');
 /**
  * Traversal method used by the BST traverse method
  *
@@ -33,11 +33,11 @@ var BinarySearchTree = (function () {
      *
      * @memberOf BinarySearchTree
      *
-     * @timeComplexity O(log n)
+     * @timeComplexity { avg: O(log n), worst: O(n) }
      * @spaceComplexity O(1)
      */
     BinarySearchTree.prototype.insert = function (data) {
-        var node = new BinaryNode_1.BinaryNode(data);
+        var node = new BinaryTreeNode_1.BinaryTreeNode(data);
         if (this._root === null) {
             this._root = node;
         }
@@ -69,7 +69,7 @@ var BinarySearchTree = (function () {
      *
      * @memberOf BinarySearchTree
      *
-     * @timeComplexity O(log n)
+     * @timeComplexity { avg: O(log n), worst: O(n) }
      * @spaceComplexity O(1)
      */
     BinarySearchTree.prototype.search = function (data) {

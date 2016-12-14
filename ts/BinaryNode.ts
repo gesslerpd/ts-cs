@@ -1,27 +1,14 @@
-export class BinaryNode<T> {
-    public data: T;
-    private _left: BinaryNode<T>;
-    private _right: BinaryNode<T>;
+
+import { BaseNode } from './BaseNode';
+
+export class BinaryNode<T> extends BaseNode<T> {
+
+    protected _first: BinaryNode<T>;
+    protected _second: BinaryNode<T>;
 
     constructor(data: T) {
-        this.data = data;
-        this._left = this._right = null;
+        super(data);
+        this._first = this._second = null;
     }
 
-    get left(): BinaryNode<T> {
-        return this._left;
-    }
-
-    set left(node: BinaryNode<T>) {
-        this._left = node;
-    }
-
-
-    get right(): BinaryNode<T> {
-        return this._right;
-    }
-
-    set right(node: BinaryNode<T>) {
-        this._right = node;
-    }
 }
