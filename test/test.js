@@ -42,6 +42,21 @@ test('Stack Test', function (t) {
     t.equal(s.pop(), 'World');
     t.equal(s.length, 1);
     t.equal(s.pop(), 'Hello');
+
+    /*
+    s.push('Hello');
+    s.push('World');
+
+    
+    s.reverse();
+
+    t.equal(s.length, 2);
+
+    t.equal(s.pop(), 'Hello');
+    t.equal(s.length, 1);
+    t.equal(s.pop(), 'World');
+    */
+
     t.equal(s.isEmpty(), true);
 });
 
@@ -54,7 +69,38 @@ test('BST Test', function (t) {
         tree.insert(i);
     }
     var j = 0;
-    tree.traverse(function (element) {
+    tree.traverse(function (element, index) {
+        // t.equal(index,j);
         t.equal(element, ++j);
     }, tscs.Traverse.INORDER);
+});
+
+test('MergeSort Test', function (t) {
+    t.plan(5);
+
+    var arr = [6, 3, 3, 2, 1];
+
+    arr = tscs.mergeSort(arr);
+
+    t.equal(arr[0], 1);
+    t.equal(arr[1], 2);
+    t.equal(arr[2], 3);
+    t.equal(arr[3], 3);
+    t.equal(arr[4], 6);
+
+});
+
+test('QuickSort Test', function (t) {
+    t.plan(5);
+
+    var arr = [6, 3, 3, 2, 1];
+
+    arr = tscs.quickSort(arr);
+
+    t.equal(arr[0], 1);
+    t.equal(arr[1], 2);
+    t.equal(arr[2], 3);
+    t.equal(arr[3], 3);
+    t.equal(arr[4], 6);
+
 });

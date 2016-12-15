@@ -1,5 +1,6 @@
 
 import { StackNode } from './StackNode';
+import { Queue } from '../Queue';
 
 /**
  * LIFO Stack
@@ -93,6 +94,18 @@ export class Stack<T> {
         return this._length === 0;
     }
 
+    /*
+    reverse(): void {
+        let q = new Queue<T>();
+        while (!this.isEmpty()) {
+            q.enqueue(this.pop());
+        }
+        while (!q.isEmpty()) {
+            this.push(q.dequeue());
+        }
+    }
+    */
+
     /**
      * Gets the number of items currently in the stack
      * 
@@ -103,4 +116,5 @@ export class Stack<T> {
     get length(): number {
         return this._length;
     }
+
 }

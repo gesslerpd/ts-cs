@@ -1,3 +1,4 @@
+import { IterateFn } from '../LinkedList';
 /**
  * Traversal method used by the BST traverse method
  *
@@ -9,11 +10,6 @@ export declare enum Traverse {
     PREORDER = 1,
     POSTORDER = 2,
 }
-/**
- * Callback used by the tree traversal
- * TODO: Add index param
- */
-export declare type Callback<T> = (elem: T) => void;
 /**
  * Binary Search Tree
  *
@@ -75,5 +71,5 @@ export declare class BinarySearchTree<T> {
      *
      * @timeComplexity O(n)
      */
-    traverse(cb: Callback<T>, method?: Traverse): void;
+    traverse(cb: IterateFn<T>, method?: Traverse): void;
 }

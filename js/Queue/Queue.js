@@ -52,7 +52,7 @@ var Queue = (function () {
      */
     Queue.prototype.dequeue = function () {
         if (this.isEmpty()) {
-            throw new Error("Cannot dequeue from an empty queue");
+            throw new Error(Queue.ERROR.EMPTY);
         }
         var temp = this._head;
         this._head = this._head.next;
@@ -71,7 +71,7 @@ var Queue = (function () {
      */
     Queue.prototype.peek = function () {
         if (this.isEmpty()) {
-            throw new Error('Queue is empty');
+            throw new Error(Queue.ERROR.EMPTY);
         }
         return this._head.data;
     };
@@ -102,6 +102,12 @@ var Queue = (function () {
         enumerable: true,
         configurable: true
     });
+    /**
+     * Queue Errors
+     */
+    Queue.ERROR = {
+        EMPTY: "Queue is empty"
+    };
     return Queue;
 }());
 exports.Queue = Queue;

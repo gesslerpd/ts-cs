@@ -1,5 +1,6 @@
 
 import { BinaryTreeNode } from './BinaryTreeNode';
+import { IterateFn } from '../LinkedList';
 
 /**
  * Traversal method used by the BST traverse method
@@ -12,12 +13,6 @@ export enum Traverse {
     PREORDER,
     POSTORDER
 }
-
-/**
- * Callback used by the tree traversal
- * TODO: Add index param
- */
-export type Callback<T> = (elem: T) => void;
 
 /**
  * Binary Search Tree
@@ -138,7 +133,7 @@ export class BinarySearchTree<T> {
      * 
      * @timeComplexity O(n)
      */
-    traverse(cb: Callback<T>, method?: Traverse) {
+    traverse(cb: IterateFn<T>, method?: Traverse) {
         method = method || Traverse.INORDER;
         function inOrder(node: BinaryTreeNode<T>) {
             if (node !== null) {

@@ -5,3 +5,6 @@ function __export(m) {
 __export(require('./Queue'));
 __export(require('./Stack'));
 __export(require('./BinarySearchTree'));
+__export(require('./Sort'));
+//export * from './Graph';
+//export * from './Heap';

@@ -11,6 +11,13 @@ import { QueueNode } from './QueueNode';
 export class Queue<T> {
 
     /**
+     * Queue Errors
+     */
+    static ERROR = {
+        EMPTY: `Queue is empty`
+    };
+
+    /**
      * Number of items currently in the queue
      * 
      * @private
@@ -83,7 +90,7 @@ export class Queue<T> {
      */
     dequeue(): T {
         if (this.isEmpty()) {
-            throw new Error(`Cannot dequeue from an empty queue`);
+            throw new Error(Queue.ERROR.EMPTY);
         }
         let temp = this._head;
         this._head = this._head.next;
@@ -103,7 +110,7 @@ export class Queue<T> {
      */
     peek(): T {
         if (this.isEmpty()) {
-            throw new Error('Queue is empty');
+            throw new Error(Queue.ERROR.EMPTY);
         }
         return this._head.data;
     }

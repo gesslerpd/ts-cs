@@ -85,6 +85,17 @@ var Stack = (function () {
         return this._length === 0;
     };
     Object.defineProperty(Stack.prototype, "length", {
+        /*
+        reverse(): void {
+            let q = new Queue<T>();
+            while (!this.isEmpty()) {
+                q.enqueue(this.pop());
+            }
+            while (!q.isEmpty()) {
+                this.push(q.dequeue());
+            }
+        }
+        */
         /**
          * Gets the number of items currently in the stack
          *

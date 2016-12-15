@@ -7,6 +7,12 @@
  */
 export declare class Queue<T> {
     /**
+     * Queue Errors
+     */
+    static ERROR: {
+        EMPTY: string;
+    };
+    /**
      * Number of items currently in the queue
      *
      * @private
