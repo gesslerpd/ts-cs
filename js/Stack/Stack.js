@@ -1,5 +1,5 @@
 "use strict";
-var StackNode_1 = require('./StackNode');
+var StackNode_1 = require("./StackNode");
 /**
  * LIFO Stack
  *

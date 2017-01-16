@@ -1,5 +1,5 @@
 "use strict";
-var QueueNode_1 = require('./QueueNode');
+var QueueNode_1 = require("./QueueNode");
 /**
  * FIFO Queue
  *
@@ -102,12 +102,12 @@ var Queue = (function () {
         enumerable: true,
         configurable: true
     });
-    /**
-     * Queue Errors
-     */
-    Queue.ERROR = {
-        EMPTY: "Queue is empty"
-    };
     return Queue;
 }());
+/**
+ * Queue Errors
+ */
+Queue.ERROR = {
+    EMPTY: "Queue is empty"
+};
 exports.Queue = Queue;

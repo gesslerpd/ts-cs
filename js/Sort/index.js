@@ -2,5 +2,5 @@
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(require('./QuickSort'));
-__export(require('./MergeSort'));
+__export(require("./QuickSort"));
+__export(require("./MergeSort"));

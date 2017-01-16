@@ -1,17 +1,17 @@
 "use strict";
-var BinaryTreeNode_1 = require('./BinaryTreeNode');
+var BinaryTreeNode_1 = require("./BinaryTreeNode");
 /**
  * Traversal method used by the BST traverse method
  *
  * @export
  * @enum {number}
  */
+var Traverse;
 (function (Traverse) {
     Traverse[Traverse["INORDER"] = 0] = "INORDER";
     Traverse[Traverse["PREORDER"] = 1] = "PREORDER";
     Traverse[Traverse["POSTORDER"] = 2] = "POSTORDER";
-})(exports.Traverse || (exports.Traverse = {}));
-var Traverse = exports.Traverse;
+})(Traverse = exports.Traverse || (exports.Traverse = {}));
 /**
  * Binary Search Tree
  *

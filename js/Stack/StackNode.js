@@ -4,7 +4,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Node_1 = require('../Node');
+var Node_1 = require("../Node");
 /**
  * Node to store data in the stack
  *
@@ -21,7 +21,7 @@ var StackNode = (function (_super) {
      * @memberOf StackNode
      */
     function StackNode(data) {
-        _super.call(this, data);
+        return _super.call(this, data) || this;
     }
     Object.defineProperty(StackNode.prototype, "prev", {
         /**

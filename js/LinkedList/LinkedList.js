@@ -1,5 +1,5 @@
 "use strict";
-var ListNode_1 = require('./ListNode');
+var ListNode_1 = require("./ListNode");
 var LinkedList = (function () {
     function LinkedList() {
         this._length = 0;
@@ -94,10 +94,10 @@ var LinkedList = (function () {
     LinkedList.prototype.toString = function () {
         return this.toArray().toString();
     };
-    LinkedList.ERROR = {
-        NONEXIST: "Node doesn't exist",
-        NONFIND: "List doesn't contain that element"
-    };
     return LinkedList;
 }());
+LinkedList.ERROR = {
+    NONEXIST: "Node doesn't exist",
+    NONFIND: "List doesn't contain that element"
+};
 exports.LinkedList = LinkedList;
