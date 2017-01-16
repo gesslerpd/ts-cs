@@ -571,7 +571,7 @@ typedoc@^0.5.1:
     typedoc-default-themes "^0.4.0"
     typescript "2.1.5"
 
-typescript@2.1.5:
+typescript@2.1.5, typescript@^2.1.5:
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.1.5.tgz#6fe9479e00e01855247cea216e7561bafcdbcd4a"
 
