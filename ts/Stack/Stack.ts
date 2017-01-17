@@ -80,6 +80,13 @@ export class Stack<T> {
         return this._tail.data;
     }
 
+    mutate(data: T) {
+        if (this.isEmpty()) {
+            throw new Error('Stack is empty');
+        }
+        return this._tail.data = data;
+    }
+
     /**
      * Checks if the stack is empty
      * 

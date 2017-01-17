@@ -71,6 +71,12 @@ var Stack = (function () {
         }
         return this._tail.data;
     };
+    Stack.prototype.mutate = function (data) {
+        if (this.isEmpty()) {
+            throw new Error('Stack is empty');
+        }
+        return this._tail.data = data;
+    };
     /**
      * Checks if the stack is empty
      *

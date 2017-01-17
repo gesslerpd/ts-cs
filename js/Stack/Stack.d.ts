@@ -44,6 +44,7 @@ export declare class Stack<T> {
      * @spaceComplexity O(1)
      */
     peek(): T;
+    mutate(data: T): T;
     /**
      * Checks if the stack is empty
      *
