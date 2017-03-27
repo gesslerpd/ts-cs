@@ -22,6 +22,6 @@
     "tap-spec": "^4.1.1",
     "tape": "^4.6.2",
     "typedoc": "^0.5.1",
-    "typescript": "^2.1.5"
+    "typescript": "^2.2.2"
   }
 }
