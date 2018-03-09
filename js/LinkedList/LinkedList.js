@@ -1,13 +1,14 @@
 "use strict";
-var ListNode_1 = require("./ListNode");
-var LinkedList = (function () {
-    function LinkedList() {
+Object.defineProperty(exports, "__esModule", { value: true });
+const ListNode_1 = require("./ListNode");
+class LinkedList {
+    constructor() {
         this._length = 0;
         this._head = null;
         this._tail = null;
     }
-    LinkedList.prototype.insert = function (data) {
-        var node = new ListNode_1.ListNode(data);
+    insert(data) {
+        let node = new ListNode_1.ListNode(data);
         if (this.isEmpty()) {
             this._head = node;
             this._tail = node;
@@ -17,9 +18,9 @@ var LinkedList = (function () {
             this._tail = node;
         }
         this._length++;
-    };
-    LinkedList.prototype.remove = function (index) {
-        var data;
+    }
+    remove(index) {
+        let data;
         if (index > this._length - 1 || index < 0) {
             throw new Error(LinkedList.ERROR.NONEXIST);
         }
@@ -28,8 +29,8 @@ var LinkedList = (function () {
             this._head = this._head.next;
         }
         else {
-            var i = 1;
-            var cur = this._head;
+            let i = 1;
+            let cur = this._head;
             while (i < index) {
                 cur = cur.next;
                 i++;
@@ -39,17 +40,17 @@ var LinkedList = (function () {
         }
         this._length--;
         return data;
-    };
-    LinkedList.prototype.removeElement = function (element) {
-        var index = this.containsElement(element);
+    }
+    removeElement(element) {
+        let index = this.containsElement(element);
         if (index === -1) {
             throw new Error(LinkedList.ERROR.NONFIND);
         }
         return this.remove(index);
-    };
-    LinkedList.prototype.containsElement = function (element) {
-        var cur = this._head;
-        var i = 0;
+    }
+    containsElement(element) {
+        let cur = this._head;
+        let i = 0;
         while (cur != null) {
             if (cur.data === element) {
                 return i;
@@ -58,10 +59,10 @@ var LinkedList = (function () {
             i++;
         }
         return -1;
-    };
-    LinkedList.prototype.isEmpty = function () {
+    }
+    isEmpty() {
         return this._length === 0;
-    };
+    }
     /**
      * Iterates through the linked list and calls the provided function
      *
@@ -69,35 +70,34 @@ var LinkedList = (function () {
      * @method forEach
      * @memberOf LinkedList
      */
-    LinkedList.prototype.forEach = function (cb) {
-        var cur = this._head;
-        var i = 0;
+    forEach(cb) {
+        let cur = this._head;
+        let i = 0;
         while (cur != null) {
             cb(cur.data, i);
             cur = cur.next;
             i++;
         }
-    };
-    LinkedList.prototype.toArray = function () {
-        var arr = new Array(this._length);
-        this.forEach(function (element, index) {
+    }
+    toArray() {
+        let arr = new Array(this._length);
+        this.forEach((element, index) => {
             arr[index] = element;
         });
         return arr;
-    };
+    }
     /**
      * Converts the linked list to a string
      * @returns {string}
      * @method toString
      * @memberOf LinkedList
      */
-    LinkedList.prototype.toString = function () {
+    toString() {
         return this.toArray().toString();
-    };
-    return LinkedList;
-}());
+    }
+}
 LinkedList.ERROR = {
-    NONEXIST: "Node doesn't exist",
-    NONFIND: "List doesn't contain that element"
+    NONEXIST: `Node doesn't exist`,
+    NONFIND: `List doesn't contain that element`
 };
 exports.LinkedList = LinkedList;

@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Swap two different indicies in an array
  *
@@ -7,7 +8,7 @@
  * @param {number} index2 The second index
  */
 function swap(A, index1, index2) {
-    var temp = A[index1];
+    let temp = A[index1];
     A[index1] = A[index2];
     A[index2] = temp;
 }
@@ -44,7 +45,7 @@ function partition(A, start, end) {
 function quickSort(A, start, end) {
     start = start || 0;
     end = end || (A.length - 1);
-    var index;
+    let index;
     if (A.length > 1) {
         index = partition(A, start, end);
         if (start < index - 1) {

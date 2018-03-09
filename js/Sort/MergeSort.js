@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Merges two sorted arrays into one sorted array
  *
@@ -10,9 +11,9 @@
  * @spaceComplexity O()
  */
 function merge(left, right) {
-    var result = [];
-    var leftIndex = 0;
-    var rightIndex = 0;
+    let result = [];
+    let leftIndex = 0;
+    let rightIndex = 0;
     while (leftIndex < left.length && rightIndex < right.length) {
         if (left[leftIndex] < right[rightIndex]) {
             result.push(left[leftIndex++]);
@@ -36,9 +37,9 @@ function mergeSort(A) {
     if (A.length < 2) {
         return A;
     }
-    var mid = Math.floor(A.length / 2);
-    var left = A.slice(0, mid);
-    var right = A.slice(mid);
+    let mid = Math.floor(A.length / 2);
+    let left = A.slice(0, mid);
+    let right = A.slice(mid);
     return merge(mergeSort(left), mergeSort(right));
 }
 exports.mergeSort = mergeSort;

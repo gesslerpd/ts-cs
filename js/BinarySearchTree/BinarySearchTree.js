@@ -1,5 +1,6 @@
 "use strict";
-var BinaryTreeNode_1 = require("./BinaryTreeNode");
+Object.defineProperty(exports, "__esModule", { value: true });
+const BinaryTreeNode_1 = require("./BinaryTreeNode");
 /**
  * Traversal method used by the BST traverse method
  *
@@ -21,8 +22,8 @@ var Traverse;
  *
  * @spaceComplexity O(n)
  */
-var BinarySearchTree = (function () {
-    function BinarySearchTree() {
+class BinarySearchTree {
+    constructor() {
         this._root = null;
     }
     /**
@@ -36,13 +37,13 @@ var BinarySearchTree = (function () {
      * @timeComplexity { avg: O(log n), worst: O(n) }
      * @spaceComplexity O(1)
      */
-    BinarySearchTree.prototype.insert = function (data) {
-        var node = new BinaryTreeNode_1.BinaryTreeNode(data);
+    insert(data) {
+        let node = new BinaryTreeNode_1.BinaryTreeNode(data);
         if (this._root === null) {
             this._root = node;
         }
         else {
-            var cur = this._root;
+            let cur = this._root;
             while (cur != null) {
                 if (data > cur.data) {
                     if (cur.right === null) {
@@ -60,7 +61,7 @@ var BinarySearchTree = (function () {
                 }
             }
         }
-    };
+    }
     /**
      * Search for an element in the tree
      *
@@ -72,8 +73,8 @@ var BinarySearchTree = (function () {
      * @timeComplexity { avg: O(log n), worst: O(n) }
      * @spaceComplexity O(1)
      */
-    BinarySearchTree.prototype.search = function (data) {
-        var cur = this._root;
+    search(data) {
+        let cur = this._root;
         while (cur != null) {
             if (data === cur.data) {
                 return true;
@@ -86,7 +87,7 @@ var BinarySearchTree = (function () {
             }
         }
         return false;
-    };
+    }
     /**
      * Creates a sorted Array from the current tree
      *
@@ -94,13 +95,13 @@ var BinarySearchTree = (function () {
      *
      * @memberOf BinarySearchTree
      */
-    BinarySearchTree.prototype.toArray = function () {
-        var result = [];
+    toArray() {
+        let result = [];
         this.traverse(function (element) {
             result.push(element);
         });
         return result;
-    };
+    }
     /**
      * Traverse through items in the tree
      *
@@ -111,7 +112,7 @@ var BinarySearchTree = (function () {
      *
      * @timeComplexity O(n)
      */
-    BinarySearchTree.prototype.traverse = function (cb, method) {
+    traverse(cb, method) {
         method = method || Traverse.INORDER;
         function inOrder(node) {
             if (node !== null) {
@@ -157,7 +158,6 @@ var BinarySearchTree = (function () {
                 postOrder(this._root);
                 break;
         }
-    };
-    return BinarySearchTree;
-}());
+    }
+}
 exports.BinarySearchTree = BinarySearchTree;

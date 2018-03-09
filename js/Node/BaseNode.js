@@ -1,18 +1,14 @@
 "use strict";
-var BaseNode = (function () {
-    function BaseNode(data) {
+Object.defineProperty(exports, "__esModule", { value: true });
+class BaseNode {
+    constructor(data) {
         this._data = data;
     }
-    Object.defineProperty(BaseNode.prototype, "data", {
-        get: function () {
-            return this._data;
-        },
-        set: function (data) {
-            this._data = data;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    return BaseNode;
-}());
+    get data() {
+        return this._data;
+    }
+    set data(data) {
+        this._data = data;
+    }
+}
 exports.BaseNode = BaseNode;
